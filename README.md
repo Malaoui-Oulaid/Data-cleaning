@@ -23,13 +23,13 @@ Les données d'entraînement étaient fragmentées en quatre fichiers (`train_su
 
 La solution est divisée en deux étapes principales :
 
-### 1. Ingestion & Harmonisation des Données (`IACamp1.ipynb`)
+### 1. Ingestion & Harmonisation des Données (`01_Data_Merging.ipynb`)
 * **Chargement :** Importation des 4 sous-ensembles d'entraînement et du jeu de test.
 * **Alignement de Schéma :** Identification et renommage des colonnes obfusquées dans les subsets 2, 3 et 4 pour correspondre au schéma maître.
 * **Parsing de Colonnes Complexes :** Extraction de valeurs mixtes (ex: séparation d'une colonne `weights` combinée en `gross` et `net`).
 * **Fusion :** Concaténation de tous les sous-ensembles en un fichier unifié `train.csv`.
 
-### 2. Nettoyage Avancé & Feature Engineering (`iacamp1.ipynb`)
+### 2. Nettoyage Avancé & Feature Engineering (`02_Data_Cleaning_and_Feature_Engineering.ipynb`)
 Ce notebook effectue un nettoyage en profondeur utilisant des **Regex** (Expressions Régulières) et **Pandas** :
 
 * **Parsing Regex :**
