@@ -1,16 +1,16 @@
-# 🧹 IACamp1 : Pipeline de Data Engineering & Nettoyage des Données
+#  IACamp1 : Pipeline de Data Engineering & Nettoyage des Données
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat&logo=python)
 ![Pandas](https://img.shields.io/badge/Pandas-Data_Manipulation-150458?style=flat&logo=pandas)
 ![Status](https://img.shields.io/badge/Status-Terminé-success)
 
-## 📋 Aperçu du Projet
+##  Aperçu du Projet
 
 Ce projet constitue la phase de préparation des données pour la compétition **IACamp1**. L'objectif était de consolider des sources de données disparates, désordonnées et obfusquées (masquées) en un jeu de données unique, propre et de haute qualité, prêt pour l'analyse et le Machine Learning.
 
 Les données brutes étaient réparties en **4 sous-ensembles (subsets)**, chacun présentant des défis de qualité uniques, allant de l'obfuscation des noms de colonnes à des incohérences d'unités et des informations textuelles imbriquées.
 
-## 🏗️ Le Défi
+##  Le Défi
 
 Les données d'entraînement étaient fragmentées en quatre fichiers (`train_subset_1` à `train_subset_4`), avec des problèmes spécifiques :
 * **Métadonnées Obfusquées :** Les colonnes des subsets 2 et 3 avaient des noms hachés (ex: `z153yi8`, `u5erb551yo`) nécessitant un mappage.
@@ -19,7 +19,7 @@ Les données d'entraînement étaient fragmentées en quatre fichiers (`train_su
 * **Informations Imbriquées :** Des détails démographiques et transactionnels clés étaient enfouis dans des chaînes de langage naturel (ex: *"Single Male with three children..."*).
 * **Incohérence des Unités :** Mélange de poids en kilogrammes, grammes et livres (lb).
 
-## ⚙️ Le Pipeline
+##  Le Pipeline
 
 La solution est divisée en deux étapes principales :
 
@@ -43,7 +43,7 @@ Ce notebook effectue un nettoyage en profondeur utilisant des **Regex** (Express
     * **Détails Produits :** Parsing de `customer_order` pour extraire : `Catégorie Produit`, `Département` et `Marque`.
 * **Imputation :** Calcul des valeurs manquantes pour `package_weight` selon la logique : $|Brut - Net|$.
 
-## 📊 Résultats
+##  Résultats
 
 | Fonctionnalité | Exemple Entrée Brute | Sortie Finale |
 | :--- | :--- | :--- |
